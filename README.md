@@ -26,12 +26,12 @@
 
 Using the link to access the Bucketlist, add and remove travel locations to always remeber where to go and where you've been.
 
-##### Hierarchy Diagram
+#####  ***Hierarchy Diagram***
 
-![Hierarchy Diagram](https://hips.hearstapps.com/countryliving.cdnds.net/17/47/1511194376-cavachon-puppy-christmas.jpg)
+![Hierarchy Diagram](./mdpictures/CompenentDiagaram.png)
 
-##### ERD
-![ERD](./LucidChartforreadme.png)
+##### ***ERD***
+![ERD](./mdpictures/LucidChartforreadme.png)
 
 ### ***Future Updates***
 
@@ -42,5 +42,5 @@ Using the link to access the Bucketlist, add and remove travel locations to alwa
 
 ***credits***
 
-Puppy: [google](/LucidChartforreadme.png)
+TBD: [TBD](/LucidChartforreadme.png)
 
