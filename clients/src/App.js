@@ -10,12 +10,12 @@ import BoatForm from './pages/BoatForm'
 import Nav from './components/Nav'
 import axios from 'axios'
 function App() {
-  const [boats, setBoats] = useState([])
+  const [cities, setCities] = useState([])
   useEffect(() => {
     async function getCities() {
       let res = await axios.get(`http://localhost:3001/cities`)
       console.log(res.data)
-      setBoats(res.data)
+      setCities(res.data)
     }
     getCities()
     return <div></div>
