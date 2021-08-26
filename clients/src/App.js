@@ -22,7 +22,7 @@ function App() {
   }, [])
 
   const [newCity, setNewCity] = useState({
-    id: '',
+    _id: '',
     name: '',
     image: '',
     description: ''
@@ -33,11 +33,11 @@ function App() {
     const currentCities = cities
     const addedCity = {
       ...newCity,
-      id: parseInt(cities.length + 1)
+      _id: parseInt(cities.length + 1)
     }
     currentCities.push(addedCity)
     setCities(currentCities)
-    setNewCity({ id: '', name: '', img: '', description: '' })
+    setNewCity({ _id: '', name: '', img: '', description: '' })
   }
 
   const handleChange = (e) => {
@@ -60,7 +60,7 @@ function App() {
             )}
           />
           <Route
-            path="/listings/:id"
+            path="/listings/:_id"
             component={(routerProps) => (
               <CityDetails {...routerProps} cities={cities} />
             )}
