@@ -1,17 +1,26 @@
-import React, { useState } from 'react'
-import boatArr from './data/boats'
+import React, { useState, useEffect } from 'react'
+//import boatArr from './data/boats'
 import './styles/App.css'
-// imports here
+
 import { Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import Listings from './pages/Listings'
 import BoatDetails from './pages/BoatDetails'
 import BoatForm from './pages/BoatForm'
 import Nav from './components/Nav'
-// The boatArr is passed into state as the initial state for 'boats' in App.js
-
+import axios from 'axios'
 function App() {
-  const [boats, setBoats] = useState(boatArr)
+  const [boats, setBoats] = useState([])
+  useEffect(() => {
+    async function getCities() {
+      let res = await axios.get(`http://localhost:3001/cities`)
+      console.log(res.data)
+      setBoats(res.data)
+    }
+    getCities()
+    return <div></div>
+  }, [])
+
   const [newBoat, setNewBoat] = useState({
     id: '',
     name: '',
