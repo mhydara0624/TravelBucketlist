@@ -1,14 +1,14 @@
 import React from 'react'
 
-function BoatCard(props) {
+function CityCard(props) {
   const { city } = props
   return (
-    <div className="boat-card" onClick={() => props.showBoat(city)}>
+    <div className="city-card" onClick={() => props.showCity(city)}>
       <img style={{ display: 'block' }} src={city.image} alt={city.name} />
-      <h3>{boat.name}</h3>
+      <h3>{city.name}</h3>
     </div>
   )
 }
 
-export default BoatCard
+export default CityCard
 //comment

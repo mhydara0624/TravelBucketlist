@@ -1,9 +1,9 @@
 import React from 'react'
 import TextInput from '../components/TextInput'
 import App from '../App'
-function BoatForm(props) {
+function CityForm(props) {
   const handleSubmit = (e) => {
-    props.addBoat(e)
+    props.addCity(e)
   }
   return (
     <div>
@@ -36,4 +36,4 @@ function BoatForm(props) {
   )
 }
 
-export default BoatForm
+export default CityForm
