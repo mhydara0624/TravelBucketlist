@@ -4,10 +4,20 @@ function CityDetails(props) {
   const [city, setCity] = useState(null)
 
   useEffect(() => {
-    let selectedCities = props.cities.find(
-      (city) => city.id === parseInt(props.match.params.id)
-    )
-    setCity(selectedCities)
+    async function findcity() {
+      try {
+        let selectedCities = props.cities.find(
+          (city) => city._id === props.match.params._id
+        )
+
+        setCity(selectedCities)
+        console.log(props.match.params._id)
+        return <div></div>
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    findcity()
   }, [])
 
   return city ? (
@@ -27,7 +37,7 @@ function CityDetails(props) {
       </div>
       <div className="info-wrapper">
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <h3>City ID: {city.id}</h3>
+          <h3>City ID: {city._id}</h3>
         </div>
         <p>{city.description}</p>
       </div>
