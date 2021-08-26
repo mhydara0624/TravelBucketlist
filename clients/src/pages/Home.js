@@ -12,9 +12,7 @@ function Home() {
       </div>
       <div>
         <h1>Bucket List</h1>
-        <h2>
-          Your luxury boat dealer, bringing you only the best of the high seas.
-        </h2>
+        <h2>Your luxury city dealer, bringing you only the best locations.</h2>
       </div>
     </div>
   )
