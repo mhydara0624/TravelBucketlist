@@ -6,6 +6,7 @@ function CityCard(props) {
     <div className="city-card" onClick={() => props.showCity(city)}>
       <img style={{ display: 'block' }} src={city.image} alt={city.name} />
       <h3>{city.name}</h3>
+      <button className='addBtn'>Add to Bucketlist</button>
     </div>
   )
 }

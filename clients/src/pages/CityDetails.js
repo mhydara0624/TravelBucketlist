@@ -5,7 +5,7 @@ function CityDetails(props) {
 
   useEffect(() => {
     let selectedCities = props.cities.find(
-      (city) => city.id === parseInt(props.match.params.id)
+      (city) => city._id === props.match.params._id
     )
     setCity(selectedCities)
   }, [])
@@ -27,7 +27,7 @@ function CityDetails(props) {
       </div>
       <div className="info-wrapper">
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <h3>City ID: {city.id}</h3>
+          <h3>City ID: {city._id}</h3>
         </div>
         <p>{city.description}</p>
       </div>
