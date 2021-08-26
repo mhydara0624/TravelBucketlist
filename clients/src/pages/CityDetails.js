@@ -44,6 +44,12 @@ function CityDetails(props) {
           className="addBtn"
           onClick={() => {
             array1 = props.bucketitems
+            for (let i = 0; i < array1.length; i++) {
+              if (array1[i].name === city.name) {
+                return
+              }
+            }
+
             array1.push(city)
             props.setBucketitems(array1)
             console.log(bucketitems)
