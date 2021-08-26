@@ -1,0 +1,23 @@
+{
+  "name": "travelbucketlist",
+  "version": "1.0.0",
+  "description": "## Date: 08/27/2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhydara0624/TravelBucketlist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhydara0624/TravelBucketlist/issues"
+  },
+  "homepage": "https://github.com/mhydara0624/TravelBucketlist#readme",
+  "dependencies": {
+    "mongoose": "^6.0.1"
+  }
+}
