@@ -3,14 +3,16 @@ import React, { useState, useEffect } from 'react'
 import './styles/App.css'
 
 import { Route, Switch } from 'react-router-dom'
-import Home from './pages/Home'
+
 import Listings from './pages/Listings'
 import CityDetails from './pages/CityDetails'
 import CityForm from './pages/CityForm'
 import Nav from './components/Nav'
 import axios from 'axios'
+import Bucketlist from './pages/Bucketlist'
 function App() {
   const [cities, setCities] = useState([])
+  const [bucketitems, setBucketitems] = useState([])
   useEffect(() => {
     async function getCities() {
       let res = await axios.get(`http://localhost:3001/cities`)
@@ -22,7 +24,7 @@ function App() {
   }, [])
 
   const [newCity, setNewCity] = useState({
-    id: '',
+    _id: '',
     name: '',
     image: '',
     description: ''
@@ -33,11 +35,11 @@ function App() {
     const currentCities = cities
     const addedCity = {
       ...newCity,
-      id: parseInt(cities.length + 1)
+      _id: parseInt(cities.length + 1)
     }
     currentCities.push(addedCity)
     setCities(currentCities)
-    setNewCity({ id: '', name: '', img: '', description: '' })
+    setNewCity({ _id: '', name: '', img: '', description: '' })
   }
 
   const handleChange = (e) => {
@@ -51,7 +53,6 @@ function App() {
       </header>
       <main>
         <Switch>
-          {/* <Route exact path="/" component={Home} /> */}
           <Route
             exact
             path="/"
@@ -60,9 +61,14 @@ function App() {
             )}
           />
           <Route
-            path="/listings/:id"
+            path="/listings/:_id"
             component={(routerProps) => (
-              <CityDetails {...routerProps} cities={cities} />
+              <CityDetails
+                {...routerProps}
+                cities={cities}
+                setBucketitems={setBucketitems}
+                bucketitems={bucketitems}
+              />
             )}
           />
           <Route
@@ -73,6 +79,16 @@ function App() {
                 newCity={newCity}
                 handleChange={handleChange}
                 addCity={addCity}
+              />
+            )}
+          />
+          <Route
+            path="/Bucketlist"
+            render={(props) => (
+              <Bucketlist
+                {...props}
+                bucketitems={bucketitems}
+                setBucketitems={setBucketitems}
               />
             )}
           />
