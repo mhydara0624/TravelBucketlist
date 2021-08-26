@@ -27,7 +27,7 @@ function CityDetails(props) {
       </div>
       <div className="info-wrapper">
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <h3>City ID: {city.id}</h3>
+          <h3>City ID: {city._id}</h3>
         </div>
         <p>{city.description}</p>
       </div>
