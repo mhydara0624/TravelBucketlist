@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Bucketlist from './Bucketlist'
 
 function CityDetails(props) {
-  const { setBucketitems, bucketitems } = props
+  const { bucketitems } = props
   const [city, setCity] = useState(null)
   let array1 = []
   console.log(props)
@@ -21,7 +20,7 @@ function CityDetails(props) {
       }
     }
     findcity()
-  }, [])
+  })
 
   return city ? (
     <div className="detail">
