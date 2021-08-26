@@ -6,17 +6,26 @@ div {
   background-size: cover;
 }
 
-.detail, .detail-header, .listings, .home, .home div, .boat-card, .navbar {
+.detail,
+.detail-header,
+.listings,
+.home,
+.home div,
+.boat-card,
+.navbar {
   display: flex;
 }
 
-.home, .home div {
+.home,
+.home div {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.detail, .city-card, .home div {
+.detail,
+.city-card,
+.home div {
   flex-direction: column;
 }
 
@@ -31,10 +40,13 @@ h2 {
 }
 
 h1 {
-  font-family: 'Georgia'
+  font-family: 'Georgia';
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
 }
 
@@ -103,14 +115,20 @@ h1, h2, h3, h4 {
 }
 
 .info-wrapper {
+  display: inline;
+  justify-self: 'space-between';
   max-width: 40em;
   margin: 0 auto;
   text-align: left;
 }
 
 .detail {
+  display: 'flex';
+  justify-content: 'center';
   min-height: 35em;
   justify-content: space-between;
+  min-width: '30em';
+  align-items: 'center';
 }
 
 form {
@@ -131,7 +149,8 @@ form input {
   padding: 0.25em;
 }
 
-button, input {
+button,
+input {
   outline: none;
   border: none;
   border-radius: 0.25em;

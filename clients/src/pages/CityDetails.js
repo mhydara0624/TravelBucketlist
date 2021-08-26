@@ -26,19 +26,11 @@ function CityDetails(props) {
     <div className="detail">
       <div className="detail-header">
         <img src={city.image} alt={city.name} />
-        <div
-          style={{
-            minWidth: '30em',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
+        <div>
           <h1>{city.name}</h1>
         </div>
       </div>
       <div className="info-wrapper">
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}></div>
         <p>{city.description}</p>
         <button
           className="addBtn"
