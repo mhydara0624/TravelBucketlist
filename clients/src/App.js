@@ -1,18 +1,41 @@
 import React, { useState } from 'react'
+import boatArr from './data/boats'
+import './styles/App.css'
+// imports here
 import { Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import Listings from './pages/Listings'
+import BoatDetails from './pages/BoatDetails'
+import BoatForm from './pages/BoatForm'
 import Nav from './components/Nav'
-import Axios from 'axios'
+// The boatArr is passed into state as the initial state for 'boats' in App.js
 
 function App() {
-  const [cities, setCities] = useState(cityArr)
-  const [newCity, setNewcity] = useState({
+  const [boats, setBoats] = useState(boatArr)
+  const [newBoat, setNewBoat] = useState({
     id: '',
     name: '',
-    image: '',
-    description: ''
+    img: '',
+    description: '',
+    price: ''
   })
+
+  const addBoat = (e) => {
+    e.preventDefault()
+    const currentBoats = boats
+    const addedBoat = {
+      ...newBoat,
+      id: parseInt(boats.length + 1),
+      price: parseInt(newBoat.price)
+    }
+    currentBoats.push(addedBoat)
+    setBoats(currentBoats)
+    setNewBoat({ id: '', name: '', img: '', description: '', price: '' })
+  }
+
+  const handleChange = (e) => {
+    setNewBoat({ ...newBoat, [e.target.name]: e.target.value })
+  }
 
   return (
     <div className="App">
