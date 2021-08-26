@@ -1,5 +1,5 @@
 import React from 'react'
-import BoatCard from '../components/BoatCard'
+import BoatCard from '../components/CityCard'
 
 function Listings(props) {
   let showBoat = (boat) => {
