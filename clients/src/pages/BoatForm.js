@@ -7,35 +7,28 @@ function BoatForm(props) {
   }
   return (
     <div>
-      <h1>Add A New Boat Listing</h1>
+      <h1>Add A New Bucket List Item</h1>
       <form onSubmit={handleSubmit}>
         <TextInput
           type="text"
-          value={props.newBoat.name}
+          value={props.newCity.name}
           onChange={props.handleChange}
           name={'name'}
           placeholder={'name'}
         />
         <TextInput
           type="text"
-          value={props.newBoat.img}
+          value={props.newCity.image}
           onChange={props.handleChange}
-          name={'img'}
+          name={'image'}
           placeholder={'image'}
         />
         <TextInput
           type="text-area"
-          value={props.newBoat.description}
+          value={props.newCity.description}
           onChange={props.handleChange}
           name={'description'}
           placeholder={'description'}
-        />
-        <TextInput
-          type="text"
-          value={props.newBoat.price}
-          onChange={props.handleChange}
-          name={'price'}
-          placeholder={'price'}
         />
         <button>Submit</button>
       </form>

@@ -6,8 +6,8 @@ function Nav() {
       <h4>Starboard</h4>
       <div>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/listings">Listings</NavLink>
-        <NavLink to="/new">Boats</NavLink>
+        <NavLink to="/bucketlist">BucketList</NavLink>
+        <NavLink to="/new">Cities</NavLink>
       </div>
     </nav>
   )

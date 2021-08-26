@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react'
 
 function BoatDetails(props) {
-  const [boat, setBoat] = useState(null)
+  const [city, setCity] = useState(null)
 
   useEffect(() => {
-    let selectedBoats = props.boats.find(
-      (boat) => boat.id === parseInt(props.match.params.id)
+    let selectedCities = props.cites.find(
+      (city) => city.id === parseInt(props.match.params.id)
     )
-    setBoat(selectedBoats)
+    setCity(selectedCities)
   }, [])
 
-  return boat ? (
+  return city ? (
     <div className="detail">
       <div className="detail-header">
-        <img src={boat.img} alt={boat.name} />
+        <img src={city.image} alt={city.name} />
         <div
           style={{
             minWidth: '30em',
@@ -22,15 +22,14 @@ function BoatDetails(props) {
             alignItems: 'center'
           }}
         >
-          <h1>{boat.name}</h1>
+          <h1>{city.name}</h1>
         </div>
       </div>
       <div className="info-wrapper">
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <h3>Price: ${boat.price}</h3>
-          <h3>Boat ID: {boat.id}</h3>
+          <h3>City ID: {city.id}</h3>
         </div>
-        <p>{boat.description}</p>
+        <p>{city.description}</p>
       </div>
     </div>
   ) : null

@@ -11,7 +11,7 @@ function Home() {
         />
       </div>
       <div>
-        <h1>Starboard</h1>
+        <h1>Bucket List</h1>
         <h2>
           Your luxury boat dealer, bringing you only the best of the high seas.
         </h2>
