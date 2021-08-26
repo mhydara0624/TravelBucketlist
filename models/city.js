@@ -10,4 +10,4 @@ const City = new Schema(
   { timestamps: true }
 )
 
-module.exports = mongoose.model('cities', City)
+module.exports = City
