@@ -6,6 +6,7 @@ function CityDetails(props) {
   useEffect(() => {
     let selectedCities = props.cities.find(
       (city) => city.id === parseInt(props.match.params.id)
+    )
     setCity(selectedCities)
   }, [])
 
