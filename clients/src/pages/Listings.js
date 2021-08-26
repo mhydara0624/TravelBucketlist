@@ -1,21 +1,21 @@
 import React from 'react'
-import BoatCard from '../components/CityCard'
+import CityCard from '../components/CityCard'
 
 function Listings(props) {
-  let showBoat = (boat) => {
-    props.history.push(`/listings/${boat.id}`)
+  let showCity = (city) => {
+    props.history.push(`/listings/${city.id}`)
   }
-  const boatListings = props.boats.map((boat) => {
+  const cityListings = props.cities.map((city) => {
     return (
-      <BoatCard
-        key={`${boat.id}${boat.name}`}
-        showBoat={showBoat}
-        boat={boat}
+      <CityCard
+        key={`${city.id}${city.name}`}
+        showCity={showCity}
+        city={city}
       />
     )
   })
 
-  return <div className="listings">{boatListings}</div>
+  return <div className="listings">{cityListings}</div>
 }
 
 export default Listings

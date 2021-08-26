@@ -16,7 +16,7 @@ div {
   flex-wrap: wrap;
 }
 
-.detail, .boat-card, .home div {
+.detail, .city-card, .home div {
   flex-direction: column;
 }
 
@@ -55,7 +55,7 @@ h1, h2, h3, h4 {
   margin-left: 0.5em;
 }
 
-.boat-card {
+.city-card {
   padding: 1em;
   width: 18em;
   height: 15em;
@@ -69,11 +69,11 @@ h1, h2, h3, h4 {
   cursor: pointer;
 }
 
-.boat-card:hover {
+.city-card:hover {
   transform: scale(1.01);
 }
 
-.boat-card img {
+.city-card img {
   width: 100%;
   height: 10em;
   object-fit: center;

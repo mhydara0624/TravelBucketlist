@@ -1,49 +1,47 @@
 import React, { useState, useEffect } from 'react'
-//import boatArr from './data/boats'
+
 import './styles/App.css'
 
 import { Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import Listings from './pages/Listings'
-import BoatDetails from './pages/BoatDetails'
-import BoatForm from './pages/BoatForm'
+import CityDetails from './pages/CityDetails'
+import CityForm from './pages/CityForm'
 import Nav from './components/Nav'
 import axios from 'axios'
 function App() {
-  const [boats, setBoats] = useState([])
+  const [cities, setCities] = useState([])
   useEffect(() => {
     async function getCities() {
       let res = await axios.get(`http://localhost:3001/cities`)
       console.log(res.data)
-      setBoats(res.data)
+      setCities(res.data)
     }
     getCities()
     return <div></div>
   }, [])
 
-  const [newBoat, setNewBoat] = useState({
+  const [newCity, setNewCity] = useState({
     id: '',
     name: '',
-    img: '',
-    description: '',
-    price: ''
+    image: '',
+    description: ''
   })
 
-  const addBoat = (e) => {
+  const addCity = (e) => {
     e.preventDefault()
-    const currentBoats = boats
-    const addedBoat = {
-      ...newBoat,
-      id: parseInt(boats.length + 1),
-      price: parseInt(newBoat.price)
+    const currentCities = cities
+    const addedCity = {
+      ...newCity,
+      id: parseInt(cities.length + 1)
     }
-    currentBoats.push(addedBoat)
-    setBoats(currentBoats)
-    setNewBoat({ id: '', name: '', img: '', description: '', price: '' })
+    currentCities.push(addedCity)
+    setCities(currentCities)
+    setNewCity({ id: '', name: '', img: '', description: '' })
   }
 
   const handleChange = (e) => {
-    setNewBoat({ ...newBoat, [e.target.name]: e.target.value })
+    setNewCity({ ...newCity, [e.target.name]: e.target.value })
   }
 
   return (
@@ -53,28 +51,28 @@ function App() {
       </header>
       <main>
         <Switch>
-          <Route exact path="/" component={Home} />
+          {/* <Route exact path="/" component={Home} /> */}
           <Route
             exact
-            path="/listings"
+            path="/"
             component={(routerProps) => (
-              <Listings {...routerProps} boats={boats} />
+              <Listings {...routerProps} cities={cities} />
             )}
           />
           <Route
             path="/listings/:id"
             component={(routerProps) => (
-              <BoatDetails {...routerProps} boats={boats} />
+              <CityDetails {...routerProps} cities={cities} />
             )}
           />
           <Route
             path="/new"
             render={(props) => (
-              <BoatForm
+              <CityForm
                 {...props}
-                newBoat={newBoat}
+                newCity={newCity}
                 handleChange={handleChange}
-                addBoat={addBoat}
+                addCity={addCity}
               />
             )}
           />

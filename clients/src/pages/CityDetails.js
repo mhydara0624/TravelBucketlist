@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
-function BoatDetails(props) {
+function CityDetails(props) {
   const [city, setCity] = useState(null)
 
   useEffect(() => {
-    let selectedCities = props.cites.find(
+    let selectedCities = props.cities.find(
       (city) => city.id === parseInt(props.match.params.id)
     )
     setCity(selectedCities)
@@ -35,4 +35,4 @@ function BoatDetails(props) {
   ) : null
 }
 
-export default BoatDetails
+export default CityDetails
