@@ -7,6 +7,7 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
 const db = require('./db')
+const path = require('path')
 
 const app = express()
 
@@ -18,10 +19,12 @@ app.get('/', (req, res) => {
   res.send('This is root!')
 })
 
+
 app.get('/cities', async (req, res) => {
   const cities = await City.find()
   res.json(cities)
 })
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')))
   app.get('*', (req, res) => {
