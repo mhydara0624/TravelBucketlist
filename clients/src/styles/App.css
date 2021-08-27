@@ -15,7 +15,6 @@ div {
 .listings,
 .home,
 .home div,
-.boat-card,
 .navbar {
   display: flex;
 }
@@ -55,19 +54,9 @@ h1 {
 }
 
 h3 {
-  font-size: 45px;
-  margin: 55px 50px;
+  font-size: 25px;
+  margin: 15px 50px;
   font-family: 'Racing Sans One', cursive;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  /* margin: 0; */
-}
-
-.city-heading {
 }
 
 .navbar {
@@ -91,13 +80,12 @@ h4 {
 
 .city-card {
   padding: 1em;
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
   background-color: rgb(83, 106, 190);
   border-radius: 0.5em;
-  /* margin: 1em; */
   margin: 50px -60px;
-  margin-left: 270px;
+  margin-left: 200px;
   justify-content: space-around;
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
   color: white;
@@ -106,12 +94,13 @@ h4 {
 }
 
 .city-card:hover {
-  transform: scale(1.01);
+  background-color: blue;
+  color: aqua;
 }
 
 .city-card img {
-  width: 100%;
-  height: 350px;
+  width: 250px;
+  height: 200px;
   object-fit: center;
   box-shadow: inset 0 0 1em rgb(0, 0, 0);
 }
@@ -172,19 +161,4 @@ form {
   min-height: 10em;
   margin: 2em auto;
   border-radius: 0.25em;
-}
-
-button {
-  outline: none;
-  border: none;
-  border-radius: 0.25em;
-}
-
-button {
-  padding: 0.5em 2em;
-  background-color: white;
-  font-family: 'Georgia';
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 1em;
 }
