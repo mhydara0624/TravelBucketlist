@@ -10,6 +10,7 @@ import CityDetails from './pages/CityDetails'
 import Nav from './components/Nav'
 import axios from 'axios'
 import Bucketlist from './pages/Bucketlist'
+
 function App() {
   const [cities, setCities] = useState([])
   const [bucketitems, setBucketitems] = useState([])
