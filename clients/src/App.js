@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import './styles/App.css'
-
+import { BASE_URL } from './globle'
 import { Route, Switch } from 'react-router-dom'
 
 import Listings from './pages/Listings'
