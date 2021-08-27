@@ -135,11 +135,13 @@ h4 {
 }
 
 .info-wrapper {
-  display: inline;
+  display: flex;
+  flex-direction: column;
   justify-self: 'space-between';
   max-width: 40em;
   margin: 0 auto;
   text-align: left;
+  align-items: center;
 }
 
 .detail {
@@ -178,3 +180,4 @@ button {
   cursor: pointer;
   margin-top: 1em;
 }
+
