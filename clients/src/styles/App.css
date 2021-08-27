@@ -40,8 +40,9 @@ div {
 
 p {
   color: white;
-  font-size: 25px;
+  font-size: 18px;
   width: 1100px;
+  margin: 50px -195px;
 }
 
 h2 {
@@ -64,6 +65,9 @@ h2,
 h3,
 h4 {
   /* margin: 0; */
+}
+
+.city-heading {
 }
 
 .navbar {
@@ -135,11 +139,17 @@ h4 {
 }
 
 .info-wrapper {
-  display: inline;
+  display: flex;
+  flex-direction: column;
   justify-self: 'space-between';
+  align-items: center;
   max-width: 40em;
   margin: 0 auto;
   text-align: left;
+}
+
+.addBtn {
+  width: 200px;
 }
 
 .detail {

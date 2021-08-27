@@ -26,9 +26,8 @@ function CityDetails(props) {
     <div className="detail">
       <div className="detail-header">
         <img src={city.image} alt={city.name} />
-        <div>
-          <h1>{city.name}</h1>
-        </div>
+
+        <h1 className="city-heading">{city.name}</h1>
       </div>
       <div className="info-wrapper">
         <p>{city.description}</p>
