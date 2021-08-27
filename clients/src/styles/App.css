@@ -2,21 +2,34 @@
   text-align: center;
 }
 
-div {
-  background-size: cover;
+body {
+  background-color: rgb(31, 50, 119);
 }
 
-.detail, .detail-header, .listings, .home, .home div, .boat-card, .navbar {
+div {
+  background-size: cover;
+  background-color: rgb(31, 50, 119);
+}
+
+.detail,
+.listings,
+.home,
+.home div,
+.boat-card,
+.navbar {
   display: flex;
 }
 
-.home, .home div {
+.home,
+.home div {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.detail, .city-card, .home div {
+.detail,
+.city-card,
+.home div {
   flex-direction: column;
 }
 
@@ -25,17 +38,36 @@ div {
   width: 30em;
 }
 
+p {
+  color: white;
+  font-size: 18px;
+  width: 1100px;
+  margin: 50px -195px;
+}
+
 h2 {
   text-align: left;
   font-weight: normal;
 }
 
 h1 {
-  font-family: 'Georgia'
+  font-family: 'Georgia';
 }
 
-h1, h2, h3, h4 {
-  margin: 0;
+h3 {
+  font-size: 45px;
+  margin: 55px 50px;
+  font-family: 'Racing Sans One', cursive;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  /* margin: 0; */
+}
+
+.city-heading {
 }
 
 .navbar {
@@ -46,6 +78,7 @@ h1, h2, h3, h4 {
   padding: 1em;
   min-height: 2em;
   font-family: 'Georgia';
+  font-size: 24px;
 }
 
 .navbar a {
@@ -53,15 +86,18 @@ h1, h2, h3, h4 {
   color: white;
   font-weight: bold;
   margin-left: 0.5em;
+  background-color: rgb(0, 0, 0);
 }
 
 .city-card {
   padding: 1em;
-  width: 18em;
-  height: 15em;
-  background-color: rgb(36, 47, 85);
+  width: 500px;
+  height: 500px;
+  background-color: rgb(83, 106, 190);
   border-radius: 0.5em;
-  margin: 1em;
+  /* margin: 1em; */
+  margin: 50px -60px;
+  margin-left: 270px;
   justify-content: space-around;
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
   color: white;
@@ -75,7 +111,7 @@ h1, h2, h3, h4 {
 
 .city-card img {
   width: 100%;
-  height: 10em;
+  height: 350px;
   object-fit: center;
   box-shadow: inset 0 0 1em rgb(0, 0, 0);
 }
@@ -103,14 +139,26 @@ h1, h2, h3, h4 {
 }
 
 .info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-self: 'space-between';
+  align-items: center;
   max-width: 40em;
   margin: 0 auto;
   text-align: left;
 }
 
+.addBtn {
+  width: 200px;
+}
+
 .detail {
+  display: 'flex';
+  justify-content: 'center';
   min-height: 35em;
   justify-content: space-between;
+  min-width: '30em';
+  align-items: 'center';
 }
 
 form {
@@ -126,12 +174,7 @@ form {
   border-radius: 0.25em;
 }
 
-form input {
-  display: block;
-  padding: 0.25em;
-}
-
-button, input {
+button {
   outline: none;
   border: none;
   border-radius: 0.25em;
