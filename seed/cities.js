@@ -46,7 +46,7 @@ const main = async () => {
       description:
         'Cairo, Egypt’s sprawling capital, is set on the Nile River. At its heart is Tahrir Square and the vast Egyptian Museum, a trove of antiquities including royal mummies and gilded King Tutankhamun artifacts. Nearby, Giza is the site of the iconic pyramids and Great Sphinx, dating to the 26th century BC. In Gezira Island’s leafy Zamalek district, 187m Cairo Tower affords panoramic city views.',
       image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Ficus_benjamina2.jpg/1280px-Ficus_benjamina2.jphttps://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Egypt%2C_Cairo%2C_Panorama_of_Islamic_Cairo%2C_also_Medieval_Cairo.jpg/640px-Egypt%2C_Cairo%2C_Panorama_of_Islamic_Cairo%2C_also_Medieval_Cairo.jpg'
+        'https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2b/45/9a.jpg'
     },
     {
       name: 'Tulum',
@@ -70,11 +70,25 @@ const main = async () => {
         'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Dubai_marina2.jpg/640px-Dubai_marina2.jpg'
     },
     {
-      name: 'Konoha',
+      name: 'Sydney',
       description:
-        "Konohagakure (木ノ葉隠れの里, Konohagakure no Sato; literally meaning 'Hidden Leaf Village'; is the hidden village of the Land of Fire. As the village of one of the Five Great Shinobi Countries, Konohagakure has a Kage as its leader, known as the Hokage. On a mountain overlooking the village from the north exists the Hokage Monument which has the faces of all those who have taken the office of Hokage engraved on it. The shinobi of this village wear blue or black shirts which may or may not have swirl patterns on the shoulders, along with matching coloured pants over a green flak jacket which also has a red swirl on the back, and pockets on the chest area.",
+        "Sydney, capital of New South Wales and one of Australia's largest cities, is best known for its harbourfront Sydney Opera House, with a distinctive sail-like design. Massive Darling Harbour and the smaller Circular Quay port are hubs of waterside life, with the arched Harbour Bridge and esteemed Royal Botanic Garden nearby. Sydney Tower’s outdoor platform, the Skywalk, offers 360-degree views of the city and suburbs.",
       image:
-        'https://static.wikia.nocookie.net/the-naruto-world/images/b/b1/Konohavillage.jpg/revision/latest?cb=20130422204914'
+        'https://www.australia.com/content/australia/en/trips-and-itineraries/sydney-and-surrounds/3-days-in-sydney/_jcr_content/hero/mobile.adapt.768.high.jpg'
+    },
+    {
+      name: 'Lagos',
+      description:
+        'Lagos, Nigeria’s largest city, sprawls inland from the Gulf of Guinea across Lagos Lagoon. Victoria Island, the financial center of the metropolis, is known for its beach resorts, boutiques and nightlife. To the north, Lagos Island is home to the National Museum Lagos, displaying cultural artifacts and craftworks. Nearby is Freedom Park, once a colonial-era prison and now a major venue for concerts and public events.',
+      image:
+        'https://wpcdn.zenger.news/wp-content/uploads/2021/07/02112530/210802_N_Nigeria_01.jpg'
+    },
+    {
+      name: 'London',
+      description:
+        'London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames River, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city',
+      image:
+        'https://www.visitbritain.com/sites/default/files/styles/consumer_vertical_hero__1920x1080/public/consumer_components_enhanced/header_image/vb34141644.jpg?itok=3pp7tR6y'
     }
   ]
 
@@ -87,3 +101,4 @@ const run = async () => {
 }
 
 run()
+//
