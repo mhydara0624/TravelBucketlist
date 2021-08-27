@@ -67,9 +67,6 @@ h4 {
   /* margin: 0; */
 }
 
-.city-heading {
-}
-
 .navbar {
   justify-content: space-between;
   align-items: center;
@@ -91,13 +88,13 @@ h4 {
 
 .city-card {
   padding: 1em;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background-color: rgb(83, 106, 190);
   border-radius: 0.5em;
   /* margin: 1em; */
   margin: 50px -60px;
-  margin-left: 270px;
+  margin-left: 200px;
   justify-content: space-around;
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
   color: white;
@@ -188,3 +185,5 @@ button {
   cursor: pointer;
   margin-top: 1em;
 }
+
+/* 1 */
