@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom'
 
 import Listings from './pages/Listings'
 import CityDetails from './pages/CityDetails'
+import { BASE_URL } from './globals'
 
 import Nav from './components/Nav'
 import axios from 'axios'
@@ -15,7 +16,7 @@ function App() {
   const [bucketitems, setBucketitems] = useState([])
   useEffect(() => {
     async function getCities() {
-      let res = await axios.get(`http://localhost:3001/cities`)
+      let res = await axios.get(`${BASE_URL}`)
       console.log(res.data)
       setCities(res.data)
     }
