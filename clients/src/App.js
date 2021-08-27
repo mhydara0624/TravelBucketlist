@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react'
-
 import './styles/App.css'
 import { BASE_URL } from './globle'
 import { Route, Switch } from 'react-router-dom'
-
 import Listings from './pages/Listings'
 import CityDetails from './pages/CityDetails'
-import { BASE_URL } from './globals'
-
 import Nav from './components/Nav'
 import axios from 'axios'
 import Bucketlist from './pages/Bucketlist'

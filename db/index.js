@@ -1,9 +1,7 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
+let MONGODB_URI = 'mongodb://127.0.0.1:27017/citiesDatabase'
 
-let MONGODB_URI =
-  process.env.NODE_ENV === 'production'
-    ? process.env.MONGODB_URI
-    : 'mongodb://127.0.0.1:27017/citiesDatabase'
 mongoose
   .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() => {

@@ -1,4 +1,5 @@
 const { City } = require('./models')
+const path = require('path')
 
 const express = require('express')
 const cors = require('cors')
@@ -16,6 +17,12 @@ app.use(logger('dev'))
 
 app.get('/', (req, res) => {
   res.send('This is root!')
+})
+
+
+app.get('/cities', async (req, res) => {
+  const cities = await City.find()
+  res.json(cities)
 })
 
 if (process.env.NODE_ENV === 'production') {
